@@ -11,15 +11,13 @@ public class Util {
     private final String PASSWORD = "1111";
     private Connection connection;
 
-    public Util() {
+
+    public Connection getConnection() {
         try {
             connection = DriverManager.getConnection(HOST, USERNAME, PASSWORD);
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }
-
-    public Connection getConnection() {
         return connection;
     }
 
