@@ -20,7 +20,7 @@ public class UserDaoJDBCImpl implements UserDao {
         } catch (SQLException e) {
             System.out.println("An error occurred while creating the table" + e.getMessage());
         }
-
+        System.out.println("DB created successful by JDBC");
     }
 
 
@@ -30,6 +30,7 @@ public class UserDaoJDBCImpl implements UserDao {
         } catch (SQLException e) {
             System.out.println("An error occurred while deletion the table" + e.getMessage());
         }
+        System.out.println("DB deletion successful by JDBC");
     }
 
     public void saveUser(String name, String lastName, byte age) {
@@ -41,6 +42,7 @@ public class UserDaoJDBCImpl implements UserDao {
         } catch (SQLException e) {
             System.out.println("An error occurred while saving the table" + e.getMessage());
         }
+        System.out.println("DB saving successful by JDBC");
     }
 
     public void removeUserById(long id) {
@@ -50,6 +52,7 @@ public class UserDaoJDBCImpl implements UserDao {
         } catch (SQLException e) {
             System.out.println("An error occurred while removing the table" + e.getMessage());
         }
+        System.out.println("DB removing successful by JDBC");
     }
 
     public List<User> getAllUsers() {
@@ -65,8 +68,9 @@ public class UserDaoJDBCImpl implements UserDao {
                 users.add(user);
             }
         } catch (SQLException e) {
-            System.out.println("An error occurred while printing all users" + e.getMessage());
+            System.out.println("An error occurred while getting all users" + e.getMessage());
         }
+        System.out.println("DB getting successful by JDBC");
         return users;
     }
 
@@ -76,5 +80,6 @@ public class UserDaoJDBCImpl implements UserDao {
         } catch (SQLException e) {
             System.out.println("An error occurred while cleaning the table" + e.getMessage());
         }
+        System.out.println("DB cleaning successful by JDBC");
     }
 }
