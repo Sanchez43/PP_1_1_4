@@ -8,7 +8,7 @@ import java.util.Objects;
 @Table
 public class User {
     @Id
-    private Long id;
+    private Long id = 0L;
 
     @Column
     private String name;
