@@ -5,6 +5,8 @@ import jm.task.core.jdbc.service.UserServiceImpl;
 public class Main {
     private final static UserService userService = new UserServiceImpl();
     public static void main(String[] args) {
+        // реализуйте алгоритм здесь
+
         userService.createUsersTable();
 
         userService.saveUser("Vlad", "Ivanov", (byte) 34);
@@ -18,7 +20,7 @@ public class Main {
 
         System.out.println("--------------------------------");
 
-        System.out.println(userService.getAllUsers());
+        userService.getAllUsers();
 
         userService.cleanUsersTable();
 
